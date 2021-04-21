@@ -6,26 +6,26 @@
 
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [ci/cd](https://github.com/brendigler/basic-express-server/actions)
+- [server url](https://brsmith-basic-express-server.herokuapp.com/)
 
 ### Setup
 
-#### `.env` requirements (when applicable)
+#### `.env` requirements
 
 - `PORT` - Port Number
 
-#### How to initialize/run your application (where applicable)
+#### How to initialize/run your application
 
-- e.g. `npm start`
+- clone to local repo
+- `npm install`
+- `npm start`
 
 #### Tests
 
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- Run tests with `npm test`
+- Logger test was copied directly from class notes
 
 #### UML / Application Wiring Diagram
 
-Link to an image of the UML for your application and response to events
+![UML](401lab02.jpg)
