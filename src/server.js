@@ -13,14 +13,18 @@ const validator = require('./middleware/validator.js');
 // global middleware
 app.use(express.json()); // handles parsing of req.body
 app.use(logger); // logs request data to console
-app.use(validator); // checks for name query string on request
+
+app.get('/person', validator, (req, res) => { //validator mw checks for good name input before processing 
+  res.send({ name: req.query.name });
+});
 
 // catch-all route handles 404 errors
 app.use('*', notFound);
-// generic server error handler
+
+// generic 500 server error handler
 app.use(serverError);
 
-// export module
+// export module for index.js
 module.exports = {
   server: app,
   start: (port) => {
