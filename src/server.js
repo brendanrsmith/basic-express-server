@@ -12,6 +12,8 @@ const validator = require('./middleware/validator.js');
 
 // global middleware
 app.use(express.json()); // handles parsing of req.body
+app.use(logger); // logs request data to console
+app.use(validator); // checks for name query string on request
 
 // catch-all route handles 404 errors
 app.use('*', notFound);
